@@ -149,8 +149,8 @@ func TestParsingPrefixExpressions(t *testing.T) {
 		{"-15;", "-", 15},
 		{"!foobar;", "!", "foobar"},
 		{"-foobar;", "-", "foobar"},
-		{"!true;", "!", true},
-		{"!false;", "!", false},
+		// {"!true;", "!", true},
+		// {"!false;", "!", false},
 	}
 
 	for _, tt := range prefixTests {
