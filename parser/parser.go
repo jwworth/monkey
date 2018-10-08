@@ -80,7 +80,7 @@ func (p *Parser) nextToken() {
 }
 
 func (p *Parser) ParseProgram() *ast.Program {
-	// Construc root note of AST
+	// Construct root note of AST
 	program := &ast.Program{}
 	program.Statements = []ast.Statement{}
 
