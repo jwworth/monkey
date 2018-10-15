@@ -231,7 +231,7 @@ type FunctionLiteral struct {
 	Body       *BlockStatement
 }
 
-// Define handing of function literals
+// Helper methods for function literals
 func (fl *FunctionLiteral) expressionNode()      {}
 func (fl *FunctionLiteral) TokenLiteral() string { return fl.Token.Literal }
 func (fl *FunctionLiteral) String() string {
