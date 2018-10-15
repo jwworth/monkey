@@ -804,7 +804,7 @@ func testBooleanLiteral(t *testing.T, exp ast.Expression, value bool) bool {
 	return true
 }
 
-// Check for parser errors. Step and print if any are found
+// Check for parser errors. Stop and print if any are found
 func checkParserErrors(t *testing.T, p *Parser) {
 	errors := p.Errors()
 	if len(errors) == 0 {
