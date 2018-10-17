@@ -31,6 +31,14 @@ $ go test ./...
 [1]: https://interpreterbook.com/
 [2]: https://golang.org/doc/install/
 
+### REPL
+
+Monkey includes the Monkey REPL. Load it as follows:
+
+```
+$ go run main.go
+```
+
 ### Code of Conduct
 
 This project is intended to be a safe, welcoming space for collaboration, and
