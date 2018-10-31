@@ -18,6 +18,8 @@ func Eval(node ast.Node, env *object.Environment) object.Object {
 	case *ast.Program:
 		return evalProgram(node, env)
 
+	case *ast.Identifier:
+		return evalIdentifier(node, env)
 
 	case *ast.ExpressionStatement:
 		return Eval(node.Expression, env)
@@ -239,4 +241,13 @@ func isError(obj object.Object) bool {
 	}
 
 	return false
+}
+
+func evalIdentifier(node *ast.Identifier, env *object.Environment) object.Object {
+	val, ok := env.Get(node.Value)
+	if !ok {
+		return newError("identifier not found: " + node.Value)
+	}
+
+	return val
 }
