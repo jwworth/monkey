@@ -35,14 +35,6 @@ func TestEvalIntegerExpression(t *testing.T) {
 	}
 }
 
-func testEval(input string) object.Object {
-	l := lexer.New(input)
-	p := parser.New(l)
-	program := p.ParseProgram()
-
-	return Eval(program)
-}
-
 func testIntegerObject(t *testing.T, obj object.Object, expected int64) bool {
 	result, ok := obj.(*object.Integer)
 
@@ -233,4 +225,14 @@ func TestErrorHandling(t *testing.T) {
 				tt.expectedMessage, errObj.Message)
 		}
 	}
+}
+
+func testEval(input string) object.Object {
+	l := lexer.New(input)
+	p := parser.New(l)
+
+	program := p.ParseProgram()
+	env := object.NewEnvironment()
+
+	return Eval(program, env)
 }
