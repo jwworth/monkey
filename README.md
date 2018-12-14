@@ -6,15 +6,15 @@ an Interpreter in Go][1] by Thorsten Ball.
 Here are the features of the Monkey language, taken directly from the book:
 
 - C-like syntax
-- variable bindings
-- integers and booleans
-- arithmetic expressions
-- built-in functions
-- first-class and higher-order functions
-- closures
-- a string data structure
-- an array data structure
-- a hash data structure
+- Variable bindings
+- Integers and booleans
+- Arithmetic expressions
+- Built-in functions
+- First-class and higher-order functions
+- Closures
+- A string data structure
+- An array data structure
+- A hash data structure
 
 ### Setup
 
@@ -27,9 +27,6 @@ $ git clone http://github.com:jwworth/monkey.git
 $ cd monkey
 $ go test ./...
 ```
-
-[1]: https://interpreterbook.com/
-[2]: https://golang.org/doc/install/
 
 ### REPL
 
@@ -50,3 +47,6 @@ CONDUCT](CODE_OF_CONDUCT.md) for more information.
 
 None of this content was created by me. This project is released under the same
 license terms as the book.
+
+[1]: https://interpreterbook.com/
+[2]: https://golang.org/doc/install/
